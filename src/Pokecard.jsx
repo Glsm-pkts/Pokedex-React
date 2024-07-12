@@ -1,38 +1,20 @@
 import React, { Component } from "react";
-import Pokecard from "./Pokecard"; 
-import './Poke.css'
 
-class Pokedex extends Component  {
-    static defaultProps = {
-        pokemon: [
-            {id: 4,   name: 'Charmander', type: 'fire',     base_experience: 62},
-            {id: 7,   name: 'Squirtle',   type: 'water',    base_experience: 63},
-            {id: 11,  name: 'Metapod',    type: 'bug',      base_experience: 72},
-            {id: 12,  name: 'Butterfree', type: 'flying',   base_experience: 178},
-            {id: 25,  name: 'Pikachu',    type: 'electric', base_experience: 112},
-            {id: 39,  name: 'Jigglypuff', type: 'normal',   base_experience: 95},
-            {id: 94,  name: 'Gengar',     type: 'poison',   base_experience: 225},
-            {id: 133, name: 'Eevee',      type: 'normal',   base_experience: 65}
-        ],
-    }
+const POKE_API = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/';
 
-    render(){
-        return(
-            <div className="Pokedex">
-                <div className="Pokedex-cards">
-                    {this.props.pokemon.map((p) => (
-                        <Pokecard 
-                            key={p.id}
-                            id={p.id}
-                            name={p.name}
-                            type={p.type}
-                            exp={p.base_experience}
-                        />
-                    ))}
+class Pokecard extends Component {
+    render() {
+        let imgSrc = `${POKE_API}${this.props.id}.png`;
+        return (
+            <div className="PokeCard">
+                <h1 className="PokeCard-title">{this.props.name}</h1>
+                <div className="PokeCard-image">
+                    <img src={imgSrc} alt={this.props.name} />
                 </div>
+                <div className="PokeCard-data">Type : {this.props.type}</div>
+                <div className="PokeCard-data">Exp: {this.props.exp}</div>
             </div>
-        );
+        )
     }
 }
-
-export default Pokedex;
+export default Pokecard;

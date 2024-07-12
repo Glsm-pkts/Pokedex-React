@@ -1,8 +1,24 @@
-# React + Vite
+## Pokedex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, Pokémon bilgilerini listeleyen Pokedex uygulamasıdır. React kullanılarak geliştirilmiştir.
 
-Currently, two official plugins are available:
+## Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Pokémon listesi
+- Pokémon detayları (tip, yetenekler, istatistikler vb.)
+
+## Kullanılan Teknolojiler
+
+- React
+- API
+- React Router 
+- CSS 
+
+## Ekran Görüntüsü
+
+![](./public/Ekran%20Resmi%202024-07-10%2021.04.50.png)
+
+
+## Gif
+
+![](./public/pokedex.gif_1.gif)

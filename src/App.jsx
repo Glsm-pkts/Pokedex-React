@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import './Poke.css';
-import Pokedex from './Pokedex';
+import './PokeCard.css';
+import PokedexGame from './PokedexGame';
+
 
 
 
@@ -12,7 +13,7 @@ function App() {
     <>
       <h1>Pokemon Go Card Game</h1>
       
-        <Pokedex />
+        <PokedexGame />
       
       
     </>
